@@ -1,0 +1,150 @@
+.info {
+    padding-top: 168px;
+    &__block {
+        max-width: $inner-width;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__left-item {
+        font-family: 'Fraunces';
+        width: 255px;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 32px;
+        color: $gray-color;
+        padding-bottom: 24px;
+        opacity: 0.6;
+        cursor: pointer;
+        transition-duration: 0.4s;
+    }
+    &__left-number {
+        margin-right: 24px;
+        color: $btn-color;
+    }
+    &__left-item:not(:nth-child(5)) {
+        border-bottom: 2px solid $gray-color;
+        margin-bottom: 24px;
+    }
+    &__left-item:hover {
+        opacity: 1;
+        color: $dark-color;
+    }
+    &__left-item:hover &__left-number {
+        color: $btn-color;
+    }
+    &__right-content {
+        width: 730px;
+    }
+    &__checkbox {
+        display: none;
+    }
+    &__right-label {
+        font-family: 'Fraunces';
+        font-weight: 900;
+        font-size: 40px;
+        line-height: 48px;
+        color: $gray-color;
+        display: flex;
+        align-items: center;
+        margin-bottom: 56px;
+        cursor: pointer;
+    }
+    &__right-label i {
+        display: block;
+        margin-left: auto;
+        transition-duration: 0.4s;
+    }
+    &__inner-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 88px;
+    }
+    &__inner-item {
+        max-width: 224px;
+        padding: 32px 25px 84px 25px;
+        background-color: #F4F1EB;
+        border-radius: 8px;
+        transition-duration: 0.4s;
+        box-shadow: 0px 8px 8px #0e86841a;
+        cursor: pointer;
+    }
+    &__inner-title {
+        font-family: 'Fraunces';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 24px;
+        color: $dark-color;
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: $dark-color-alpha;
+    }
+    &__inner-item:hover {
+        background-color: $btn-color;
+        box-shadow: 0px 12px 21px #0e868442;
+    }
+    &__inner-item:hover &__inner-title {
+        color: $snow-color;
+    }
+    &__inner-item:hover &__inner-text {
+        color: $snow-color-alpha;
+    }
+    &__inner-item:active {
+        background-color: $number-color;
+        box-shadow: 0px 4px 4px #FDD6BA6f;
+    }
+    &__inner-item:active &__inner-title {
+        color: $dark-color;
+    }
+    &__inner-item:active &__inner-text {
+        color: $dark-color-alpha;
+    }
+    &__inner-list {
+        display: none;
+    }
+    &__checkbox:checked~&__inner-list {
+        display: flex;
+    }
+    &__checkbox:checked~&__right-label {
+        color: $dark-color;
+    }
+    &__checkbox:checked~&__right-label i {
+        transform: rotateX(-180deg);
+    }
+    &__right-box {
+        padding: 27px 64px;
+        background-color: $bg-color;
+        border-radius: 10px;
+        margin-top: 84px;
+    }
+    &__bottom-text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        opacity: 0.5;
+        margin-bottom: 8px;
+    }
+    &__bottom-content {
+        font-family: 'Fraunces';
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 40px;
+        color: $snow-color;
+    }
+    &__right-span {
+        color: $btn-color;
+    }
+    &__btn-box {
+        margin-top: 40px;
+        text-align: end;
+    }
+}

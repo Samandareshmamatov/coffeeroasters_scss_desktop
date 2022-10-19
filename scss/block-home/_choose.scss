@@ -1,0 +1,91 @@
+.choose {
+    padding-top: 200px;
+    text-align: center;
+    &__block {
+        position: relative;
+        padding-top: 100px;
+        background-color: $bg-color;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding-bottom: 86px;
+    }
+    &__title {
+        font-family: 'Fraunces';
+        font-weight: 900;
+        font-size: 40px;
+        line-height: 48px;
+        color: $snow-color;
+        margin-bottom: 32px;
+    }
+    &__text {
+        max-width: 540px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: $snow-color-alpha;
+        margin-bottom: 86px;
+        margin: 0 auto;
+    }
+    &__space {
+        position: absolute;
+        background-color: $bg-color;
+        width: 100%;
+        height: 230px;
+        bottom: -66%;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        z-index: -1;
+    }
+    &__list {
+        padding: 0;
+        max-width: $inner-width;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+    }
+    &__item {
+        max-width: 350px;
+        background-color: $btn-color;
+        border-radius: 8px;
+        display: inline-block;
+        padding: 72px 48px 48px 48px;
+    }
+    &__item::before {
+        content: '';
+        width: 72px;
+        height: 72px;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: inline-block;
+        margin-bottom: 56px;
+    }
+    &__item:nth-child(1):before {
+        content: '';
+        background-image: url('../img/choose-1.svg');
+    }
+    &__item:nth-child(2):before {
+        content: '';
+        background-image: url('../img/choose-2.svg');
+    }
+    &__item:nth-child(3):before {
+        content: '';
+        background-image: url('../img/choose-3.svg');
+    }
+    &__inner-title {
+        font-family: 'Fraunces';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 32px;
+        color: $snow-color;
+        margin-bottom: 24px;
+    }
+    &__inner-text {
+        max-width: 255px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: $snow-color-alpha;
+    }
+}

@@ -1,0 +1,38 @@
+.site-header {
+  padding-top: 43px;
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo-box {
+    max-width: 236px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.92px;
+    text-transform: uppercase;
+
+  }
+
+  &__item+&__item {
+    margin-left: 33px;
+  }
+
+  &__link {
+    display: inline-block;
+    color: $gray-color;
+    position: relative;
+  }
+
+}
