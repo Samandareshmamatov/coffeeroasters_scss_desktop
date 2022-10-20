@@ -66,28 +66,6 @@ img {
   padding: 0 20px;
 }
 
-.btn {
-  display: inline-block;
-  font-family: "Fraunces";
-  font-weight: 900;
-  font-size: 18px;
-  line-height: 25px;
-  text-align: center;
-  color: #FEFCF7;
-  background-color: #0E8784;
-  border-radius: 6px;
-  padding: 15px 31px;
-  transition-duration: 0.4s;
-}
-
-.btn:hover {
-  background-color: #66D2CF;
-}
-
-.btn:active {
-  background-color: #E2DEDB;
-}
-
 .site-header__link,
 .site-footer__link {
   display: block;
@@ -144,6 +122,71 @@ img {
   transition: transform 0.6s;
   transform-origin: left;
   transform: scaleX(1);
+}
+
+.btn {
+  display: inline-block;
+  font-family: "Fraunces";
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 25px;
+  background-color: #0E8784;
+  border-radius: 6px;
+  padding: 15px 31px;
+  transition-duration: 0.4s;
+  border: 3px solid #0E8784;
+  color: transparent;
+  transition: all 0.5s;
+  position: relative;
+}
+
+.btn:before {
+  content: "Create your plan";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(254, 252, 247, 0.8);
+  background-color: #2C343E;
+  font-size: 18px;
+  top: 0;
+  left: 100%;
+  letter-spacing: 2px;
+  transition: all 1s;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform: scale(0) rotatey(0);
+  opacity: 0;
+}
+
+.btn:hover:before {
+  transform: scale(1) rotatey(360deg);
+  left: 0;
+  opacity: 1;
+}
+
+.btn:after {
+  content: "Create your plan";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(254, 252, 247, 0.8);
+  background-color: #2C343E;
+  font-size: 18px;
+  top: 0;
+  left: 0;
+  letter-spacing: 2px;
+  transition: all 1s;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform: scale(1) rotatey(0);
+}
+
+.btn:hover:after {
+  transform: scale(0) rotatey(360deg);
+  left: -100%;
+  opacity: 0;
 }
 
 .hero {
