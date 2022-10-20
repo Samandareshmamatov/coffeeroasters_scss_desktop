@@ -702,9 +702,10 @@ img {
 }
 .site-footer__media-item:hover:before {
   content: "";
-  background-size: 90% 90%;
+  background-size: 100% 100%;
   background-color: #83888F;
   border-radius: 50%;
+  background-color: #FDD6BA;
 }
 
 .create-hero {
