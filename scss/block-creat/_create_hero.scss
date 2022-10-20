@@ -1,31 +1,21 @@
 .create-hero {
-  padding-top: 43px;
-
-  &__container {
-    max-width: 1280px;
-    padding: 134px 85px;
-    background-repeat: no-repeat;
-    background-image: url('../../img/create-hero.jpg');
-    background-position: center;
-    background-size: 100% 100%;
-    border-radius: 10px;
-  }
-
-  &__title {
-    font-family: 'Fraunces';
-    font-style: normal;
-    font-weight: 900;
-    font-size: 72px;
-    line-height: 72px;
-    color: $snow-color;
-    margin-bottom: 32px;
-  }
-
-  &__text {
-    max-width: 445px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 26px;
-    color: $snow-color-alpha;
-  }
+    padding-top: 43px;
+    &__container {
+        max-width: 1280px;
+        padding: 134px 85px;
+        @include background;
+        background-image: url('../../img/create-hero.jpg');
+        background-size: 100% 100%;
+        border-radius: 10px;
+    }
+    &__title {
+        @include title($snow-color);
+        font-size: 72px;
+        line-height: 72px;
+        margin-bottom: 32px;
+    }
+    &__text {
+        max-width: 445px;
+        @include text($snow-color-alpha);
+    }
 }

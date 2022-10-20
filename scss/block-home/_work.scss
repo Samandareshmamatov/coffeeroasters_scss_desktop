@@ -5,19 +5,16 @@
         margin: 0 auto;
     }
     &__title {
-        font-family: 'Fraunces';
-        font-weight: 900;
+        @include title($gray-color);
         font-size: 24px;
         line-height: 32px;
-        color: $gray-color;
         margin-bottom: 95px;
     }
     &__line {
         max-width: 790px;
         height: 2px;
         background-color: $number-color;
-        display: flex;
-        align-items: center;
+        @include flex;
         justify-content: space-between;
         margin-bottom: 82px;
     }
@@ -43,12 +40,10 @@
     &__item::before {
         content: '01';
         display: inline-block;
-        font-family: 'Fraunces';
-        font-style: normal;
-        font-weight: 900;
+        @include title;
         font-size: 72px;
         line-height: 72px;
-        color: #FDD6BA;
+        color: $number-color;
         margin-bottom: 38px;
     }
     &__item:nth-child(1)::before {
@@ -61,19 +56,14 @@
         content: '03';
     }
     &__inner-title {
-        font-family: 'Fraunces';
-        font-weight: 900;
+        @include title;
         font-size: 32px;
         line-height: 36px;
-        color: $dark-color;
         margin-bottom: 42px;
         max-width: 255px;
     }
     &__text {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 26px;
-        color: $dark-color-alpha;
+        @include text;
         max-width: 285px;
     }
 }

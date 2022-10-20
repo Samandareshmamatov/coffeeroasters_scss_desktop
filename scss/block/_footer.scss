@@ -18,8 +18,7 @@
     }
     &__list {
         margin-left: 102px;
-        display: flex;
-        align-items: center;
+        @include flex;
     }
     &__item {
         font-weight: 700;
@@ -32,11 +31,10 @@
         margin-left: 33px;
     }
     &__link {
-        color: #83888F;
+        color: $gray-color;
     }
     &__media-list {
-        display: flex;
-        align-items: center;
+        @include flex;
         margin-left: auto;
     }
     &__media-item {
@@ -58,9 +56,7 @@
         height: 36px;
         display: inline-block;
         background-size: 66% 66%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-position: center;
+        @include background;
         transition-duration: 0.6s;
     }
     &__media-item:nth-child(1):before {

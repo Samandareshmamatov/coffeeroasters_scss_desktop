@@ -10,19 +10,12 @@
         padding-bottom: 86px;
     }
     &__title {
-        font-family: 'Fraunces';
-        font-weight: 900;
-        font-size: 40px;
-        line-height: 48px;
-        color: $snow-color;
+        @include title($snow-color);
         margin-bottom: 32px;
     }
     &__text {
         max-width: 540px;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 26px;
-        color: $snow-color-alpha;
+        @include text($snow-color-alpha);
         margin-bottom: 86px;
         margin: 0 auto;
     }
@@ -39,9 +32,8 @@
     &__list {
         padding: 0;
         max-width: $inner-width;
-        display: flex;
+        @include flex;
         justify-content: space-between;
-        align-items: center;
         margin: 0 auto;
     }
     &__item {
@@ -55,8 +47,7 @@
         content: '';
         width: 72px;
         height: 72px;
-        background-repeat: no-repeat;
-        background-position: center;
+        @include background;
         display: inline-block;
         margin-bottom: 56px;
     }
@@ -73,9 +64,7 @@
         background-image: url('../img/choose-3.svg');
     }
     &__inner-title {
-        font-family: 'Fraunces';
-        font-style: normal;
-        font-weight: 900;
+        @include title;
         font-size: 24px;
         line-height: 32px;
         color: $snow-color;
@@ -83,9 +72,6 @@
     }
     &__inner-text {
         max-width: 255px;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 26px;
-        color: $snow-color-alpha;
+        @include text($snow-color-alpha);
     }
 }

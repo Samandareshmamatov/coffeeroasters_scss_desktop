@@ -1,0 +1,24 @@
+@mixin title($dark-color) {
+    font-family: $secondary-font;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 48px;
+    color: $dark-color;
+}
+
+@mixin text($dark-color-alpha) {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: $dark-color-alpha;
+}
+
+@mixin background {
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@mixin flex {
+    display: flex;
+    align-items: center;
+}

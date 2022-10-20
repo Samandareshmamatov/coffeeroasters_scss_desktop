@@ -1,43 +1,27 @@
 .commitment {
-  padding-top: 168px;
-
-  &__block {
-    max-width: $inner-width;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-
-  &__img-box {
-    width: 445px;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-
-  &__img {
-    width: 100%;
-  }
-
-  &__content {
-    margin-left: 124px;
-  }
-
-  &__title {
-    font-family: 'Fraunces';
-    font-weight: 900;
-    font-size: 40px;
-    line-height: 48px;
-    color: $dark-color;
-    margin-bottom: 32px;
-  }
-
-  &__text {
-    max-width: 540px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 26px;
-    color: $dark-color-alpha;
-  }
+    padding-top: 168px;
+    &__block {
+        max-width: $inner-width;
+        margin: 0 auto;
+        @include flex;
+        justify-content: space-between;
+    }
+    &__img-box {
+        width: 445px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    &__img {
+        width: 100%;
+    }
+    &__content {
+        margin-left: 124px;
+    }
+    &__title {
+        @include title;
+        margin-bottom: 32px;
+    }
+    &__text {
+        @include text;
+    }
 }

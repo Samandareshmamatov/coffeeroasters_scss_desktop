@@ -4,7 +4,7 @@
             max-width: $inner-width;
             margin: 0 auto;
             padding: 0;
-            background-repeat: no-repeat;
+            @include background;
             background-image: url('../img/collection_bg.png');
             background-position: center top;
         }
@@ -22,8 +22,7 @@
             content: '';
             width: 255px;
             height: 193px;
-            background-repeat: no-repeat;
-            background-position: center;
+            @include background;
             display: inline-block;
             margin-bottom: 71px;
         }
@@ -44,18 +43,13 @@
             background-image: url('../img/type-tea_4.png');
         }
         &__title {
-            font-family: 'Fraunces';
-            font-weight: 900;
+            @include title;
             font-size: 24px;
             line-height: 32px;
-            color: $dark-color;
             margin-bottom: 24px;
         }
         &__text {
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 26px;
-            color: $dark-color-alpha;
+            @include text;
             max-width: 255px;
         }
     }

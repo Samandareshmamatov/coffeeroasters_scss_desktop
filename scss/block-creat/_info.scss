@@ -7,10 +7,8 @@
         justify-content: space-between;
     }
     &__left-item {
-        font-family: 'Fraunces';
         width: 255px;
-        font-style: normal;
-        font-weight: 900;
+        @include title;
         font-size: 24px;
         line-height: 32px;
         color: $gray-color;
@@ -46,8 +44,7 @@
         font-size: 40px;
         line-height: 48px;
         color: $gray-color;
-        display: flex;
-        align-items: center;
+        @include flex;
         margin-bottom: 56px;
         cursor: pointer;
     }
@@ -72,13 +69,10 @@
         cursor: pointer;
     }
     &__inner-title {
-        font-family: 'Fraunces';
-        font-style: normal;
-        font-weight: 900;
+        @include title;
         font-size: 24px;
         line-height: 32px;
         margin-bottom: 24px;
-        color: $dark-color;
     }
     &__text {
         font-weight: 400;
@@ -125,20 +119,16 @@
         margin-top: 84px;
     }
     &__bottom-text {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 26px;
+        @include text(#fff);
         text-transform: uppercase;
-        color: #FFFFFF;
         opacity: 0.5;
         margin-bottom: 8px;
     }
     &__bottom-content {
-        font-family: 'Fraunces';
-        font-weight: 900;
+        @include title($snow-color);
         font-size: 24px;
         line-height: 40px;
-        color: $snow-color;
+        color: #FFFFFF;
     }
     &__right-span {
         color: $btn-color;
