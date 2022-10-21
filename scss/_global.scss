@@ -16,6 +16,11 @@ body {
     background-color: #FEFCF7;
 }
 
+::selection {
+    background-color: transparent;
+    color: unset;
+}
+
 h1,
 h2,
 h3,
