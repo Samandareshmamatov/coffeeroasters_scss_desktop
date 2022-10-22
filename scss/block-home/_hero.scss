@@ -1,24 +1,31 @@
 .hero {
     padding-top: 57px;
-    &__container {
-        max-width: 1280px;
-        margin: 0 auto;
-        padding: 117px 85px;
-        @include background;
-        background-image: url('../../img/hero-bg.jpg');
-        background-size: cover;
-        border-radius: 10px;
-    }
-    &__title {
-        @include title($snow-color);
-        font-size: 72px;
-        line-height: 72px;
-        max-width: 493px;
-        margin-bottom: 32px;
-    }
-    &__text {
-        @include text($snow-color-alpha);
-        max-width: 425px;
-        margin-bottom: 56px;
+}
+
+.hero__block {
+    padding: 117px 85px;
+    @include background;
+    background-image: url('../../img/hero-bg.jpg');
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.hero__title {
+    @include title($snow-color);
+    font-size: 72px;
+    line-height: 72px;
+    max-width: 493px;
+    margin-bottom: 32px;
+}
+
+.hero__text {
+    @include text($snow-color-alpha);
+    max-width: 425px;
+    margin-bottom: 56px;
+}
+
+@media screen and (max-width:768px) {
+    .hero {
+        padding-top: 53px;
     }
 }
