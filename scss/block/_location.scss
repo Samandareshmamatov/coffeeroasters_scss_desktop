@@ -5,7 +5,7 @@
         margin: 0 auto;
     }
     &__title {
-        @include title;
+        @include title($gray-color);
         margin-bottom: 72px;
     }
     &__list {
@@ -13,6 +13,8 @@
     }
     &__item {
         max-width: 285px;
+        display: flex;
+        flex-direction: column;
     }
     &__item+&__item {
         margin-left: 108px;
@@ -40,15 +42,61 @@
         background-image: url('../../img/location-3.svg');
     }
     &__inner-title {
-        @include title;
+        @include title($dark-color);
         margin-bottom: 24px;
         font-size: 32px;
         line-height: 36px;
     }
     &__text {
-        @include text;
+        @include text($dark-color-alpha);
     }
     &__inner-item+&__inner-item {
         margin-top: 5px;
+    }
+}
+
+@media only screen and(max-width:850px) {
+    .location {
+        padding-top: 144px;
+        &__title {
+            font-size: 24px;
+            line-height: 32px;
+            margin-bottom: 72px;
+        }
+        &__inner-title {
+            font-size: 24px;
+            line-height: 36px;
+        }
+        &__item+&__item {
+            margin-left: 48px;
+        }
+    }
+}
+
+@media only screen and(max-width:650px) {
+    .location {
+        padding-top: 100px;
+        &__title {
+            text-align: center;
+        }
+        &__list {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        &__item+&__item {
+            margin-left: -48px;
+            margin-top: 80px;
+        }
+        &__inner-title {
+            font-size: 24px;
+            line-height: 36px;
+        }
+        &__item::before {
+            content: '';
+            margin: 0 auto;
+            margin-bottom: 48px;
+        }
     }
 }

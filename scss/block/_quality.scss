@@ -1,17 +1,14 @@
 .quality {
     padding-top: 244px;
-    &__container {
+    &__block {
         max-width: 1280px;
-        margin: 0 auto;
         background-color: $bg-color;
         border-radius: 10px;
-    }
-    &__block {
-        max-width: $inner-width;
         margin: 0 auto;
         position: relative;
         display: flex;
         justify-content: space-between;
+        padding: 0 85px
     }
     &__title {
         @include title($snow-color);
@@ -24,14 +21,90 @@
         margin-bottom: 176px;
     }
     &__img-box {
-        max-width: 445px;
+        width: 445px;
         position: relative;
         right: 0;
         top: -84px;
-        border-radius: 15px;
+        border-radius: 10px;
         overflow: hidden;
     }
     &__img {
-        height: 100%;
+        width: 445px;
+        border-radius: 10px;
+    }
+    &__img-tablet {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:1180px) {
+    .quality {
+        padding-top: 200px;
+        &__block {
+            padding: 0 50px
+        }
+        &__title {
+            font-size: 32px;
+            margin-right: 40px;
+            line-height: 48px;
+        }
+        &__text {
+            max-width: 460px;
+            margin-right: 40px;
+            margin-bottom: 80px;
+        }
+        &__img-box {
+            flex-shrink: 0;
+        }
+        &__title {
+            margin-top: 75px;
+        }
+    }
+}
+
+@media only screen and (max-width:930px) {
+    .quality {
+        padding-top: 160px;
+        &__block {
+            padding: 0 50px;
+            flex-direction: column-reverse;
+        }
+        &__img-box {
+            width: 100%;
+            top: -48px;
+        }
+        &__img {
+            display: none;
+        }
+        &__img-tablet {
+            display: block;
+        }
+        &__title {
+            margin-top: 0px;
+            margin-right: 0;
+            text-align: center;
+        }
+        &__text {
+            max-width: 100%;
+            margin-right: 0;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+        &__img-box {
+            flex-shrink: 0;
+        }
+    }
+}
+
+@media only screen and (max-width:690px) {
+    .quality {
+        padding-top: 100px;
+        &__block {
+            padding: 0 24px;
+        }
+        &__title {
+            font-size: 28px;
+            line-height: 28px;
+        }
     }
 }

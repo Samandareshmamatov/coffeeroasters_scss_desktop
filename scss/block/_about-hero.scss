@@ -1,11 +1,11 @@
 .about-hero {
     padding-top: 43px;
-    &__container {
+    &__block {
         max-width: 1280px;
         padding: 137px 85px;
         @include background;
         background-image: url('../../img/about-hero-bg.jpg');
-        background-size: 100% 100%;
+        background-size: cover;
         border-radius: 10px;
     }
     &__title {
@@ -15,5 +15,45 @@
     &__text {
         max-width: 445px;
         @include text($snow-color-alpha);
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .about-hero {
+        &__block {
+            padding: 118px 58px;
+            background-image: url('../../img/about-hero-tablet.jpg');
+            background-position-x: right;
+        }
+        &__title {
+            font-size: 32px;
+            line-height: 40px;
+            margin-bottom: 24px;
+        }
+        &__text {
+            max-width: 398px;
+            font-size: 15px;
+            line-height: 25px;
+        }
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .about-hero {
+        padding-top: 40px;
+        &__block {
+            padding: 111px 24px 87px 24px;
+            background-image: url('../../img/about-hero-mobile.jpg');
+        }
+        &__title {
+            font-size: 28px;
+            line-height: 28px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        &__text {
+            max-width: 100%;
+            text-align: center;
+        }
     }
 }

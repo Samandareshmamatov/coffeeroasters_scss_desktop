@@ -1,31 +1,73 @@
 .hero {
     padding-top: 57px;
-}
-
-.hero__block {
-    padding: 117px 85px;
-    @include background;
-    background-image: url('../../img/hero-bg.jpg');
-    background-size: cover;
-    border-radius: 10px;
-}
-
-.hero__title {
-    @include title($snow-color);
-    font-size: 72px;
-    line-height: 72px;
-    max-width: 493px;
-    margin-bottom: 32px;
-}
-
-.hero__text {
-    @include text($snow-color-alpha);
-    max-width: 425px;
-    margin-bottom: 56px;
+    &__block {
+        padding: 117px 85px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('../../img/hero-bg.jpg');
+        background-size: cover;
+        border-radius: 10px;
+    }
+    &__title {
+        @include title($snow-color);
+        font-size: 72px;
+        line-height: 72px;
+        max-width: 493px;
+        margin-bottom: 32px;
+    }
+    &__text {
+        @include text($snow-color-alpha);
+        max-width: 425px;
+        margin-bottom: 56px;
+    }
 }
 
 @media screen and (max-width:768px) {
     .hero {
         padding-top: 53px;
+        &__block {
+            padding: 103px 58px;
+            background-size: cover;
+            background-image: url('../../img/hero-bg-tablet.jpg');
+            background-position-x: right;
+        }
+        &__title {
+            font-size: 48px;
+            line-height: 48px;
+            max-width: 329px;
+            margin-bottom: 24px;
+        }
+        &__text {
+            font-size: 15px;
+            line-height: 25px;
+            max-width: 398px;
+            margin-bottom: 40px;
+        }
+    }
+}
+
+@media screen and (max-width:500px) {
+    .hero {
+        padding-top: 41px;
+        &__block {
+            padding: 100px 24px;
+            background-size: cover;
+            background-image: url('../../img/hero-bg-mobile.jpg');
+        }
+        &__title {
+            font-size: 40px;
+            line-height: 40px;
+            max-width: 100%;
+            text-align: center;
+        }
+        &__text {
+            font-size: 15px;
+            line-height: 25px;
+            max-width: 100%;
+            text-align: center;
+        }
+        &__link-box {
+            text-align: center;
+        }
     }
 }

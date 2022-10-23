@@ -1,9 +1,9 @@
 @mixin title($dark-color) {
+    color: $dark-color;
     font-family: $secondary-font;
     font-weight: 900;
     font-size: 40px;
     line-height: 48px;
-    color: $dark-color;
 }
 
 @mixin text($dark-color-alpha) {

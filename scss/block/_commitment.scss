@@ -8,20 +8,93 @@
     }
     &__img-box {
         width: 445px;
+        position: relative;
         border-radius: 10px;
-        overflow: hidden;
     }
     &__img {
-        width: 100%;
+        width: 445px;
+        border-radius: 10px;
     }
     &__content {
         margin-left: 124px;
     }
     &__title {
-        @include title;
+        @include title($dark-color);
         margin-bottom: 32px;
     }
     &__text {
-        @include text;
+        @include text($dark-color-alpha);
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    .commitment {
+        padding-top: 140px;
+        &__img {
+            width: 400px;
+        }
+        &__content {
+            margin-left: 69px;
+        }
+        &__title {
+            margin-bottom: 30px;
+            font-size: 32px;
+            line-height: 48px;
+        }
+        &__text {
+            font-size: 15px;
+            line-height: 25px;
+        }
+    }
+}
+
+@media only screen and (max-width:850px) {
+    .commitment {
+        padding-top: 120px;
+        &__img {
+            width: 350px;
+            height: 470px;
+        }
+        &__content {
+            margin-left: 55px;
+        }
+        &__title {
+            margin-bottom: 24px;
+        }
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .commitment {
+        padding-top: 100px;
+        &__block {
+            flex-direction: column;
+            text-align: center;
+        }
+        &__img {
+            margin-bottom: 40px;
+        }
+        &__content {
+            margin-left: 0;
+        }
+    }
+}
+
+@media only screen and (max-width:450px) {
+    .commitment {
+        &__img {
+            width: 315px;
+            height: 423px;
+            margin-bottom: 40px;
+        }
+    }
+}
+
+@media only screen and (max-width:325px) {
+    .commitment {
+        &__img {
+            width: 250px;
+            height: 335px;
+        }
     }
 }

@@ -33,17 +33,16 @@
     &__item {
         max-width: 285px;
     }
-    &__item+.work__item {
+    &__item+&__item {
         padding: 0;
         margin-left: 95px;
     }
     &__item::before {
         content: '01';
         display: inline-block;
-        @include title;
+        @include title($number-color);
         font-size: 72px;
         line-height: 72px;
-        color: $number-color;
         margin-bottom: 38px;
     }
     &__item:nth-child(1)::before {
@@ -56,14 +55,81 @@
         content: '03';
     }
     &__inner-title {
-        @include title;
+        @include title($dark-color);
         font-size: 32px;
         line-height: 36px;
         margin-bottom: 42px;
         max-width: 255px;
     }
     &__text {
-        @include text;
+        @include text($dark-color-alpha);
         max-width: 285px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .work {
+        padding-top: 140px;
+        &__block {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        &__title {
+            margin-bottom: 40px;
+        }
+        &__line {
+            max-width: 480px;
+            margin-bottom: 48px;
+        }
+        &__item {
+            max-width: 223px;
+        }
+        &__item+&__item {
+            margin-left: 10px;
+        }
+        &__inner-title {
+            font-size: 28px;
+            line-height: 32px;
+            margin-bottom: 38px;
+        }
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .work {
+        padding-top: 120px;
+        &__title {
+            max-width: 100%;
+            margin-bottom: 80px;
+            text-align: center;
+        }
+        &__line {
+            display: none;
+        }
+        &__list {
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+        &__item {
+            max-width: 100%;
+        }
+        &__item+&__item {
+            margin-top: 24px;
+        }
+        &__inner-title {
+            max-width: 100%;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        &__item::before {
+            content: '01';
+            margin-bottom: 24px;
+            margin-left: -20px;
+        }
+        &__btn-box {
+            text-align: center;
+        }
     }
 }

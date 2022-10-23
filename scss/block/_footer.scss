@@ -1,20 +1,15 @@
 .site-footer {
     padding-top: 168px;
-    &__container {
-        max-width: 1280px;
-        margin: 0 auto;
-        background-color: $bg-color;
-        margin-bottom: 88px;
-    }
+    padding-bottom: 88px;
     &__block {
-        max-width: $inner-width;
+        background-color: $bg-color;
         margin: 0 auto;
-        padding: 35px 0;
+        padding: 35px 85px;
         display: flex;
         align-items: center;
     }
-    &__logo-box {
-        max-width: 236px;
+    &__logo-img {
+        width: 236px;
     }
     &__list {
         margin-left: 102px;
@@ -40,7 +35,7 @@
     &__media-item {
         position: relative;
     }
-    &__media-item+.site-footer__media-item {
+    &__media-item+&__media-item {
         margin-left: 24px;
     }
     &__media-link {
@@ -77,5 +72,58 @@
         background-color: $gray-color;
         border-radius: 50%;
         background-color: $number-color;
+    }
+}
+
+@media only screen and(max-width:1050px) {
+    .site-footer {
+        padding-top: 140px;
+        padding-bottom: 70px;
+        &__block {
+            flex-direction: column;
+        }
+        &__list {
+            margin-left: 0px;
+            margin-bottom: 65px;
+        }
+        &__media-list {
+            margin-left: 0px;
+        }
+        &__logo-box {
+            margin-bottom: 34px;
+        }
+    }
+}
+
+@media only screen and(max-width:570px) {
+    .site-footer {
+        padding-top: 100px;
+        &__block {
+            flex-direction: column;
+        }
+        &__logo-img {
+            width: 163px;
+        }
+        &__list {
+            margin-bottom: 49px;
+            flex-direction: column;
+            padding: 0;
+            text-align: center;
+        }
+        &__item+&__item {
+            margin-left: 0;
+            margin-top: 24px;
+        }
+        &__item {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        &__media-list {
+            margin-left: 0px;
+        }
+        &__logo-box {
+            margin-bottom: 49px;
+        }
     }
 }

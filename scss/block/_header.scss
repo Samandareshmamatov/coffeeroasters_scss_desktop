@@ -4,8 +4,8 @@
         @include flex;
         justify-content: space-between;
     }
-    &__logo-box {
-        max-width: 236px;
+    &__logo-img {
+        width: 236px;
     }
     &__list {
         @include flex;
@@ -24,5 +24,125 @@
         display: inline-block;
         color: $gray-color;
         position: relative;
+    }
+    &__mobile-box {
+        display: none;
+    }
+    &__checkbox {
+        display: none;
+    }
+    &__label {
+        width: 16px;
+        height: 16px;
+        display: block;
+        background-repeat: no-repeat;
+        background-image: url('../../img/hamburger-icon.svg');
+        background-size: cover;
+        background-position: center;
+        cursor: pointer;
+        display: none;
+    }
+    &__mobile-list {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        text-align: center;
+        margin-top: 90px;
+        padding-top: 40px;
+        height: 100vh;
+        background: linear-gradient(180deg, rgba(254, 252, 247, 0.504981) 0%, #FEFCF7 55.94%);
+        display: none;
+        z-index: 100;
+    }
+    &__mobile-item+&__mobile-item {
+        margin-top: 32px;
+    }
+    &__mobile-link {
+        @include title($dark-color);
+    }
+    &__checkbox:checked~&__mobile-list {
+        display: block;
+    }
+    &__checkbox:checked~&__label {
+        width: 16px;
+        height: 16px;
+        display: block;
+        background-repeat: no-repeat;
+        background-image: url('../../img/menu_alt.svg');
+    }
+}
+
+@media screen and (max-width:700px) {
+    .site-header {
+        padding-top: 32px;
+        &__logo-img {
+            width: 163px;
+        }
+        &__mobile-box {
+            display: block;
+        }
+        &__navbar {
+            display: none;
+        }
+        &__item+&__item {
+            margin-left: 18px;
+        }
+        &__label {
+            display: block;
+        }
+        &__mobile-link {
+            overflow: hidden;
+            position: relative;
+            display: inline-block;
+        }
+        &__mobile-link::before,
+        &__mobile-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            left: 0;
+        }
+        &__mobile-link::before {
+            content: '';
+            background-color: $dark-color;
+            height: 2px;
+            bottom: 0;
+            transform-origin: 100% 50%;
+            transform: scaleX(0);
+            transition: transform 1s ease;
+        }
+        &__mobile-link::after {
+            content: "";
+            height: 100%;
+            top: 0;
+            transform-origin: 100% 50%;
+            transform: translate3d(200%, 0, 0);
+            transition: transform 1s ease;
+            color: $dark-color;
+        }
+        &__mobile-item:nth-child(1) &__mobile-link::after {
+            content: "Home";
+        }
+        &__mobile-item:nth-child(2) &__mobile-link::after {
+            content: "About us";
+        }
+        &__mobile-item:nth-child(3) &__mobile-link::after {
+            content: "Create your plan";
+        }
+        &__mobile-link:hover::before {
+            transform-origin: 0% 50%;
+            transform: scaleX(1);
+        }
+        &__mobile-link:hover::after {
+            transform: translate3d(0, 0, 0);
+        }
+        &__mobile-link span {
+            display: inline-block;
+            transition: transform 1s ease;
+        }
+        &__mobile-link:hover span {
+            transform: translate3d(-200%, 0, 0);
+        }
     }
 }

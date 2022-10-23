@@ -19,7 +19,9 @@
             <div class="site-header__box">
 
                 <div class="site-header__logo-box">
-                    <a class="site-header__logo" href="#"><img src="./img/header-logo.svg" alt="Logo of Coffeeroasters"></a>
+                    <a class="site-header__logo" href="#">
+                        <img src="./img/header-logo.svg" alt="Logo off Coffeeroasters" class="site-header__logo-img">
+                    </a>
                 </div>
 
                 <nav class="site-header__navbar">
@@ -30,15 +32,33 @@
                             <a class="site-header__link" href="index.html">Home</a>
                         </li>
                         <li class="site-header__item">
-                            <a class="site-header__link" href="#">About us</a>
+                            <a class="site-header__link" href="about.html">About us</a>
                         </li>
                         <li class="site-header__item">
-                            <a class="site-header__link" href="create.html">Create your plan</a>
+                            <a class="site-header__link" href="#">Create your plan</a>
                         </li>
 
                     </ul>
 
                 </nav>
+
+                <div class="site-header__mobile-box">
+                    <input type="checkbox" name="check" id="header-check" class="site-header__checkbox">
+                    <label for="header-check" class="site-header__label"></label>
+                    <ul class="site-header__mobile-list">
+
+                        <li class="site-header__mobile-item">
+                            <a class="site-header__mobile-link" href="index.html"><span>Home</span></a>
+                        </li>
+                        <li class="site-header__mobile-item">
+                            <a class="site-header__mobile-link" href="#"><span>About us</span> </a>
+                        </li>
+                        <li class="site-header__mobile-item">
+                            <a class="site-header__mobile-link" href="create.html"><span>Create your plan</span></a>
+                        </li>
+
+                    </ul>
+                </div>
 
 
             </div>
@@ -52,9 +72,11 @@
         <section class="about-hero">
 
             <div class="container about-hero__container">
+                <div class="about-hero__block">
+                    <h1 class="about-hero__title">About Us</h1>
+                    <p class="about-hero__text">Coffeeroasters began its journey of exotic discovery in 1999, highlighting stories of coffee from around the world. We have since been dedicated to bring the perfect cup - from bean to brew - in every shipment.</p>
+                </div>
 
-                <h1 class="about-hero__title">About Us</h1>
-                <p class="about-hero__text">Coffeeroasters began its journey of exotic discovery in 1999, highlighting stories of coffee from around the world. We have since been dedicated to bring the perfect cup - from bean to brew - in every shipment.</p>
             </div>
 
         </section>
@@ -64,7 +86,7 @@
             <div class="container commitment__container">
                 <div class="commitment__block">
                     <div class="commitment__img-box">
-                        <img src="./img/commitment-bg.jpg" alt="Kofe tayyorlayotgan yigit" class="commitment__img">
+                        <img src="./img/commitment.jpg" alt="Kofe tayyorlayotgan yigit" class="commitment__img">
                     </div>
                     <div class="commitment__content">
                         <h2 class="commitment__title">Our commitment</h2>
@@ -90,7 +112,8 @@
                             with a roast date and batch number. Our goal is to roast consistent, user-friendly coffee, so that brewing is easy and enjoyable.</p>
                     </div>
                     <div class="quality__img-box">
-                        <img src="./img/quality-bg.jpg" alt="A cup coffee" class="quality__img">
+                        <img src="./img/quality.jpg" alt="A cup coffee" class="quality__img">
+                        <img src="./img/quality-tablet.jpg" alt="A cup coffee" class="quality__img-tablet">
                     </div>
 
                 </div>

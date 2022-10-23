@@ -64,14 +64,99 @@
         background-image: url('../img/choose-3.svg');
     }
     &__inner-title {
-        @include title;
+        @include title($snow-color);
         font-size: 24px;
         line-height: 32px;
-        color: $snow-color;
         margin-bottom: 24px;
     }
     &__inner-text {
         max-width: 255px;
         @include text($snow-color-alpha);
+    }
+}
+
+@media screen and (max-width:1130px) {
+    .choose {
+        padding-top: 100px;
+        &__block {
+            padding-top: 70px;
+        }
+        &__title {
+            font-size: 32px;
+            margin-bottom: 24px;
+        }
+        &__text {
+            font-style: 15px;
+            line-height: 25px;
+            margin-bottom: 0px;
+            max-width: 90%;
+        }
+        &__list {
+            flex-direction: column;
+            max-width: 100%;
+        }
+        &__item {
+            display: flex;
+            align-items: center;
+            max-width: 90%;
+            padding: 41px 48px;
+            text-align: start;
+        }
+        &__item+&__item {
+            margin-top: 24px;
+        }
+        &__item::before {
+            content: '';
+            margin-bottom: 0;
+            margin-right: 55px;
+        }
+        &__inner-title {
+            margin-bottom: 12px;
+        }
+        &__space {
+            height: 350px;
+            bottom: -100%;
+        }
+    }
+}
+
+@media screen and (max-width:570px) {
+    .choose {
+        padding-top: 100px;
+        &__block {
+            padding-top: 70px;
+        }
+        &__title {
+            font-size: 32px;
+            margin-bottom: 24px;
+        }
+        &__text {
+            max-width: 100%;
+        }
+        &__list {
+            flex-direction: column;
+            max-width: 100%;
+        }
+        &__item {
+            flex-direction: column;
+            max-width: 90%;
+            padding: 72px 33px 50px 33px;
+            text-align: center;
+        }
+        &__item+&__item {
+            margin-top: 24px;
+        }
+        &__item::before {
+            content: '';
+            margin-bottom: 56px;
+            margin-right: 0;
+        }
+        &__inner-title {
+            margin-bottom: 12px;
+        }
+        &__space {
+            height: 650px;
+            bottom: -180%;
+        }
     }
 }

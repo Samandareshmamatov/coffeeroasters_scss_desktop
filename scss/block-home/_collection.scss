@@ -1,55 +1,106 @@
+.collection {
+    padding-top: 123px;
+    &__container {
+        padding: 0 85px;
+    }
+    &__list {
+        @include background;
+        background-image: url('../img/collection_bg.png');
+        background-position: left top;
+        background-size: 100% auto;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 126px;
+        text-align: center;
+    }
+    &__item {
+        max-width: 255px;
+    }
+    &__item::before {
+        content: '';
+        width: 255px;
+        height: 193px;
+        @include background;
+        display: inline-block;
+        margin-bottom: 71px;
+    }
+    &__item:nth-child(1)::before {
+        content: '';
+        background-image: url('../img/type-tea_1.png');
+    }
+    &__item:nth-child(2)::before {
+        content: '';
+        background-image: url('../img/type-tea_2.png');
+    }
+    &__item:nth-child(3)::before {
+        content: '';
+        background-image: url('../img/type-tea_3.png');
+    }
+    &__item:nth-child(4)::before {
+        content: '';
+        background-image: url('../img/type-tea_4.png');
+    }
+    &__title {
+        @include title($dark-color);
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 24px;
+    }
+    &__text {
+        @include text($dark-color-alpha);
+        max-width: 255px;
+    }
+}
+
+@media screen and (max-width:1150px) {
     .collection {
-        padding-top: 123px;
+        padding-top: 100px;
         &__container {
-            max-width: $inner-width;
-            margin: 0 auto;
             padding: 0;
-            @include background;
-            background-image: url('../img/collection_bg.png');
-            background-position: center top;
         }
         &__list {
-            display: flex;
-            justify-content: space-between;
-            padding: 0;
-            padding-top: 126px;
-            text-align: center;
+            flex-direction: column;
+            align-items: center;
         }
         &__item {
-            max-width: 255px;
+            display: flex;
+            align-items: center;
+            text-align: start;
+            max-width: 90%;
+        }
+        &__item+&__item {
+            margin-top: 47px;
         }
         &__item::before {
             content: '';
-            width: 255px;
-            height: 193px;
-            @include background;
-            display: inline-block;
-            margin-bottom: 71px;
+            margin-bottom: 0;
         }
-        &__item:nth-child(1)::before {
+        &__text {
+            font-size: 15px;
+            line-height: 25px;
+            max-width: 285px;
+        }
+    }
+}
+
+@media screen and (max-width:450px) {
+    .collection {
+        &__item {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 100%;
+        }
+        &__item+&__item {
+            margin-top: 47px;
+        }
+        &__item::before {
             content: '';
-            background-image: url('../img/type-tea_1.png');
-        }
-        &__item:nth-child(2)::before {
-            content: '';
-            background-image: url('../img/type-tea_2.png');
-        }
-        &__item:nth-child(3)::before {
-            content: '';
-            background-image: url('../img/type-tea_3.png');
-        }
-        &__item:nth-child(4)::before {
-            content: '';
-            background-image: url('../img/type-tea_4.png');
-        }
-        &__title {
-            @include title;
-            font-size: 24px;
-            line-height: 32px;
             margin-bottom: 24px;
         }
         &__text {
-            @include text;
-            max-width: 255px;
+            max-width: 90%;
+            margin: 0 auto;
         }
     }
+}
