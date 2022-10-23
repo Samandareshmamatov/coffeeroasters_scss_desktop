@@ -1245,7 +1245,7 @@ img {
     text-align: center;
   }
   .location__item + .location__item {
-    margin-left: -48px;
+    margin-left: 0px;
     margin-top: 80px;
   }
   .location__inner-title {
